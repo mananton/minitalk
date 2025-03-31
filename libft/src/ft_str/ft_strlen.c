@@ -6,7 +6,7 @@
 /*   By: mananton <telesmanuel@hotmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:33:14 by mananton          #+#    #+#             */
-/*   Updated: 2025/01/27 12:17:56 by mananton         ###   ########.fr       */
+/*   Updated: 2025/03/31 11:14:25 by mananton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 size_t	ft_strlen(const char *str)
 {
 	int	i;
-
+	
 	i = 0;
-	while (str[i])
+	while (str && str[i])
 		i++;
 	return (i);
 }

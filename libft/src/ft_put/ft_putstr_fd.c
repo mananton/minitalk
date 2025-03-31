@@ -6,7 +6,7 @@
 /*   By: mananton <telesmanuel@hotmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:45:55 by mananton          #+#    #+#             */
-/*   Updated: 2025/01/27 12:17:24 by mananton         ###   ########.fr       */
+/*   Updated: 2025/03/31 12:12:40 by mananton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		write(fd, &str[i], 1);
-		i++;
-	}
+	write(fd, str, ft_strlen(str));
 }

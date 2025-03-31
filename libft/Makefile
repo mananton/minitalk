@@ -6,7 +6,7 @@
 #    By: mananton <telesmanuel@hotmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 13:22:44 by mananton          #+#    #+#              #
-#    Updated: 2025/01/27 15:36:09 by mananton         ###   ########.fr        #
+#    Updated: 2025/03/31 11:47:57 by mananton         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ FTMEM_DIR		=	$(SRC_DIR)ft_mem/ft_bzero.c \
 					$(SRC_DIR)ft_mem/ft_memchr.c \
 					$(SRC_DIR)ft_mem/ft_memcmp.c \
 					$(SRC_DIR)ft_mem/ft_memmove.c \
-					$(SRC_DIR)ft_mem/ft_memset.c
+					$(SRC_DIR)ft_mem/ft_memset.c \
+					$(SRC_DIR)ft_mem/ft_memcpy.c
 
 FTPUT_DIR		=	$(SRC_DIR)ft_put/ft_putchar_fd.c \
 					$(SRC_DIR)ft_put/ft_putendl_fd.c \
