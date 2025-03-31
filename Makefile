@@ -63,7 +63,7 @@ fclean:				clean
 					@$(RM) $(NAME) $(SVR) $(CLNBN) $(SVRBN)
 					@$(RM) $(LIBFT)
 
-re:					fclean all
+re:					fclean start
 
 # Phony targets represent actions not files
 .PHONY:				start all clean fclean re bonus

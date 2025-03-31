@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mananton <telesmanuel@hotmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 13:23:12 by mananton          #+#    #+#             */
-/*   Updated: 2025/02/19 13:18:38 by mananton         ###   ########.fr       */
+/*   Created: 2025/02/19 10:50:12 by mananton          #+#    #+#             */
+/*   Updated: 2025/02/19 13:17:18 by mananton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/minitalk.h"
+#include "../inc/minitalk_bonus.h"
 
 void    ft_bin_to_char(int signal, char *c)
 {
@@ -50,7 +50,7 @@ void    sig_handler(int signal, siginfo_t *info, void *context)
 int     main(void)
 {
         struct sigaction        sa;
-		
+
         ft_printf("Server PID is: %d\n", getpid());
         sigemptyset(&sa.sa_mask);
         sa.sa_flags = SA_SIGINFO;
@@ -58,7 +58,7 @@ int     main(void)
         if (sigaction(SIGUSR1, &sa, NULL) == -1 \
                 || sigaction(SIGUSR2, &sa, NULL) == -1)
                 return (ft_putstr_fd("Error sigaction\n", 1), 1);
-        while (1)
+        while (true)
                 pause();
         return (0);
 }

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mananton <telesmanuel@hotmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 13:18:46 by mananton          #+#    #+#             */
-/*   Updated: 2025/02/19 13:29:23 by mananton         ###   ########.fr       */
+/*   Created: 2025/02/19 10:49:28 by mananton          #+#    #+#             */
+/*   Updated: 2025/02/19 13:59:22 by mananton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/minitalk.h"
+#include "../inc/minitalk_bonus.h"
 
 static int      g_sign_sent;
 
@@ -74,7 +74,7 @@ int     main(int argc, char *argv[])
         sa.sa_flags = SA_SIGINFO;
         sa.sa_sigaction = sig_handler;
         if (pid < 0 || kill(pid, 0) == -1)
-                return (ft_printf("check your PID\n"));
+                return (ft_printf("check your pid \n"));
         if (sigaction(SIGUSR1, &sa, NULL) == -1 \
                 || sigaction(SIGUSR2, &sa, NULL) == -1)
                 return (ft_putstr_fd("Error sigaction\n", 1), 1);
